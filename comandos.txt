@@ -1,0 +1,5 @@
+docker build -f Dockerfile.builder -t builder:latest .
+
+docker container cp [id_of_container]:/go/src/helloworld/helloworld helloworld
+
+docker build -f Dockerfile.prod -t helloworld:latest .
